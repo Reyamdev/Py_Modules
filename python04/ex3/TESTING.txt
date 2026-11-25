@@ -1,0 +1,34 @@
+LOCAL TEST RESOURCES - EXCLUDE ALL TEXT FILES FROM THE 42 SUBMISSION.
+These fixtures may be kept in the GitHub development repository.
+
+Run from python04/ex3 to reproduce the PDF's four cases:
+  chmod 000 denied_fragment.txt
+  python3 ft_vault_security.py
+  chmod 600 denied_fragment.txt
+
+Expected results: False (missing), False (permission denied), True (read),
+True (write). The local filenames differ from the PDF's example paths.
+
+The demonstration reads does_not_exist.txt, denied_fragment.txt, and
+ancient_fragment.txt, then creates or replaces recovered_fragment.txt.
+The paths are relative to your terminal working directory.
+
+The denied file is normally readable so Git can add it. Without chmod 000,
+the second call correctly returns True because the file is accessible.
+Restore readability before staging it. Git does not preserve mode 000
+read/write permissions; repeat chmod 000 locally after a clone.
+Root/administrator processes may bypass these permissions.
+
+To try individual calls from this directory:
+  python3
+  from ft_vault_security import secure_archive
+  secure_archive("empty.txt")
+  secure_archive("blank_lines.txt")
+  secure_archive("no_final_newline.txt")
+  secure_archive("saved_fragment.txt", "w", "Hello\n")
+  secure_archive("saved_fragment.txt")
+  secure_archive("ancient_fragment.txt", "bad")
+
+Do not create does_not_exist.txt; it is intentionally missing.
+For Vogsphere, use a separate submission repository or branch with only the
+four required exN/filename.py files. A different remote does not filter files.

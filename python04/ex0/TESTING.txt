@@ -1,0 +1,27 @@
+LOCAL TEST RESOURCES - EXCLUDE ALL TEXT FILES FROM THE 42 SUBMISSION.
+These fixtures may be kept in the GitHub development repository.
+
+Run from python04/ex0:
+  python3 ft_ancient_text.py ancient_fragment.txt
+  python3 ft_ancient_text.py empty.txt
+  python3 ft_ancient_text.py blank_lines.txt
+  python3 ft_ancient_text.py no_final_newline.txt
+
+Error cases:
+  python3 ft_ancient_text.py
+  python3 ft_ancient_text.py does_not_exist.txt
+  python3 ft_ancient_text.py .
+
+The missing file is intentionally not supplied.
+Passing . tests opening the current directory as a file.
+Paths are relative to your terminal working directory.
+
+PDF EXAMPLE CASES - run from this exercise directory:
+  python3 ft_ancient_text.py
+  python3 ft_ancient_text.py foo
+  chmod 000 denied_fragment.txt
+  python3 ft_ancient_text.py denied_fragment.txt
+  chmod 600 denied_fragment.txt
+  python3 ft_ancient_text.py ancient_fragment.txt
+The denied-access filename is local rather than /etc/master.passwd.
+Do not create foo; it is the missing-file example.

@@ -1,0 +1,33 @@
+LOCAL TEST RESOURCES - EXCLUDE ALL TEXT FILES FROM THE 42 SUBMISSION.
+These fixtures may be kept in the GitHub development repository.
+
+Run from python04/ex1:
+  python3 ft_archive_creation.py ancient_fragment.txt
+  python3 ft_archive_creation.py empty.txt
+  python3 ft_archive_creation.py blank_lines.txt
+  python3 ft_archive_creation.py no_final_newline.txt
+
+Error cases:
+  python3 ft_archive_creation.py
+  python3 ft_archive_creation.py does_not_exist.txt
+  python3 ft_archive_creation.py .
+
+The missing file is intentionally not supplied.
+Passing . tests opening the current directory as a file.
+Paths are relative to your terminal working directory.
+
+At the save prompt, press Enter to skip saving, or enter:
+  saved_fragment.txt
+Saving to that name again tests replacement of existing content.
+Try missing_directory/output.txt to test a save failure.
+Use a different filename from the input to preserve the original.
+
+PDF EXAMPLE CASES - run from this exercise directory:
+  python3 ft_archive_creation.py ancient_fragment.txt
+At the prompt, press Enter. Expect: Not saving data.
+Then run it again:
+  python3 ft_archive_creation.py ancient_fragment.txt
+At the prompt, type: new_fragment.txt
+Expect the saving messages, then inspect the saved text:
+  cat new_fragment.txt
+The original file remains unchanged when using this different output name.

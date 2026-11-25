@@ -1,0 +1,37 @@
+LOCAL TEST RESOURCES - EXCLUDE ALL TEXT FILES FROM THE 42 SUBMISSION.
+These fixtures may be kept in the GitHub development repository.
+
+Run from python04/ex2:
+  python3 ft_stream_management.py ancient_fragment.txt
+  python3 ft_stream_management.py empty.txt
+  python3 ft_stream_management.py blank_lines.txt
+  python3 ft_stream_management.py no_final_newline.txt
+
+Error cases:
+  python3 ft_stream_management.py
+  python3 ft_stream_management.py does_not_exist.txt
+  python3 ft_stream_management.py .
+
+The missing file is intentionally not supplied.
+Passing . tests opening the current directory as a file.
+Paths are relative to your terminal working directory.
+
+At the save prompt, press Enter to skip saving, or enter:
+  saved_fragment.txt
+Saving to that name again tests replacement of existing content.
+Try missing_directory/output.txt to test a save failure.
+Use a different filename from the input to preserve the original.
+
+PDF EXAMPLE CASES - run from this exercise directory:
+  python3 ft_stream_management.py foo
+Do not create foo; it is the missing-file example.
+For the failed-save example:
+  chmod 000 denied_fragment.txt
+  python3 ft_stream_management.py ancient_fragment.txt
+At the prompt, type: denied_fragment.txt
+Expect [STDERR] Error opening file ... Permission denied, then Data not saved.
+After the test:
+  chmod 600 denied_fragment.txt
+This uses a local denied file in place of the PDF's /etc/passwd destination.
+Restore readability before adding fixtures to Git. Git does not preserve
+these read/write permission bits; set chmod 000 locally for each test.
